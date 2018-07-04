@@ -75,7 +75,7 @@ articleView.setTeasers = () => {
 };
 
 // COMMENT: Where is this function called? Why?
-// PUT YOUR RESPONSE HERE
+// This function is called at the bottom of new.html.
 articleView.initNewArticlePage = () => {
 
   // DONE: The new articles we create will be copy/pasted into our source data file.
@@ -97,7 +97,7 @@ articleView.create = () => {
   $('#articles').empty();
 
 
-  // TODO: Instantiate an article based on what's in the form fields:
+  // DONE: Instantiate an article based on what's in the form fields:
   article = new Article({
     title: $('#article-title').val(),
     author: $('#article-author').val(),
@@ -122,7 +122,7 @@ articleView.create = () => {
 };
 
 // COMMENT: Where is this function called? Why?
-// PUT YOUR RESPONSE HERE
+// This function is called in index.html.  
 articleView.initIndexPage = () => {
   articles.forEach(article => $('#articles').append(article.toHtml()));
   articleView.populateFilters();
